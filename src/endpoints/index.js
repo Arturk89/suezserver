@@ -1,7 +1,7 @@
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../doc/swagger.json');
 
-const API_VERSION = 'v1-api-suez';
+const API_VERSION = 'v1-apisuez';
 
 const carsRoutes = require("./cars/routes");
 
