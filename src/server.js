@@ -1,15 +1,18 @@
-require('dotenv').config();
+const path = require('path')
+require('dotenv').config({path: path.resolve('../.env')})
 
 const express = require('express');
-const constants = require("./config/constans");
+const constants = require("./config/constants");
+const middlewareConfig = require('./config/middleware');
 const apiEndpoints = require("./endpoints");
 
-
 const app = express();
+middlewareConfig(app);
 
 app.get("/", (req, res) => {
     res.send("Hello, from new api!!!")
 })
+
 
 apiEndpoints(app);
 
