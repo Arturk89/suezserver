@@ -46,6 +46,10 @@ const CarSchema = new Schema({
     overviewCarDate: {
         type: Date,
         default: Date.now
+    },
+    whoCreated: {
+        type: String,
+        required: true
     }
 })
 
@@ -64,5 +68,6 @@ module.exports = Car = mongoose.model('Car', CarSchema);
 //     "tireSize": "SN-20",
 //     "exhaustGasStandard": "EURO 6",
 //     "tachographOverview": "2020-09-09",
-//     "overviewCarDate": "2020-10-08"
+//     "overviewCarDate": "2020-10-08",
+//     "whoCreated": "asdawdaa32dsadas"
 // }

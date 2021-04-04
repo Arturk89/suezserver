@@ -12,7 +12,8 @@ const schemas = {
         tireSize: Joi.string().required(),
         exhaustGasStandard: Joi.string().required(),
         tachographOverview: Joi.date().required(),
-        overviewCarDate: Joi.date().required()
+        overviewCarDate: Joi.date().required(),
+        whoCreated: Joi.string().required
     }),
     update: Joi.object().keys({
         title: Joi.string().min(3).required(),
@@ -25,7 +26,8 @@ const schemas = {
         tireSize: Joi.string().required(),
         exhaustGasStandard: Joi.string().required(),
         tachographOverview: Joi.date().required(),
-        overviewCarDate: Joi.date().required()
+        overviewCarDate: Joi.date().required(),
+        whoCreated: Joi.string().required
     }),
 }
 
