@@ -1,24 +1,20 @@
 const mongoose = require('mongoose');
+const HTTPStatus = require('http-status');
 const db = process.env.MONGO_URI;
 
-
-
-if(db){
-    const db_connect = 
-        mongoose.connect(db, {
+module.exports 
+= connect = () => {
+    if(db){
+       mongoose.connect(db, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useCreateIndex: true
+            useCreateIndex: true,
+            useFindAndModify: false
         })
         .then(() => console.log("Mongo db connected"))
         .catch((err) => console.log("Error: ", err))
-
-        module.exports = db_connect;
-
-}else{
-    const db_connect = console.log("Error to join to mongodb");
-    module.exports = db_connect;
+    }else{
+        return console.log("Error to join to mongodb");
+    }
 }
-
-
 

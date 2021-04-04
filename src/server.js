@@ -9,7 +9,7 @@ const mongoConnect = require("./config/database");
 
 const app = express();
 middlewareConfig(app);
-mongoConnect;
+mongoConnect();
 
 
 app.get("/", (req, res) => {
