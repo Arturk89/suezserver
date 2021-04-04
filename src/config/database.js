@@ -11,10 +11,10 @@ module.exports
             useCreateIndex: true,
             useFindAndModify: false
         })
-        .then(() => console.log("Mongo db connected"))
-        .catch((err) => console.log("Error: ", err))
+        .then(() => console.log("- Mongo db connected"))
+        .catch((err) => console.log("- Error: ", err))
     }else{
-        return console.log("Error to join to mongodb");
+        return console.log("- Error to join to mongodb");
     }
 }
 
